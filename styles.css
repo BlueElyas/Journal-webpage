@@ -134,6 +134,7 @@ footer span {
 
 @media (min-width: 780px) {
     .grid {
+        margin-left: 6em;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
     .container {
@@ -143,8 +144,12 @@ footer span {
         display: grid;
     }
 
+    .main-article-summary h1 {
+        font-size: 4rem;
+    }
+
     .main-article-summary p {
-        width: 760px;
+        width: 1000px;
     }
     .main-article-summary {
         display: flex;
