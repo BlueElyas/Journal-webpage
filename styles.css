@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* Flex design */
+
+.container-flex {
+    display: flex;
+}
+
+/* Container */
+
+
+/* Index header design */
+header {
+    margin: 1em;
+    padding: 0.5em;
+}
+
+.index-header div {
+    align-items: center;
+    font-weight: 700;
+    justify-content: space-between;
+}
+
+.index-header ul {
+    list-style-type: none;
+    font-size: 0.8rem;
+    display: inline-flex;
+}
+
+.index-header li {
+    margin-left: 3em;
+}
+
+.index-header h1 {
+    font-size: 1.25rem;
+}
+
+
+/* Index main area design */
+
+.main-article-summary {
+    background-image: url(background-image.jpg);
+    background-size: cover;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+}
+
+.main-article-summary .container-flex{
+    line-height: 1.3;
+    color: white;
+    padding: 1em 0.5em;
+    flex-direction: column;
+    padding: 2em 1em;
+}
+
+.main-article-summary .date {
+    margin-top: 4.5em;
+}
+
+.main-article-summary h1 {
+    font-size: 2.15rem;
+    margin-bottom: 0.5em;
+}
+
+/*Article designs*/
+
+.grid {
+    display: grid;
+}
+
+article {
+    max-width: 500px;
+}
+
+.container {
+    margin: 1em;
+    gap: 15px;
+    flex-direction: column;
+}
+.container img {
+    margin-top: 1.5em;
+    width: 100%;
+    border-radius: 5px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hidden-until-width {
+    display: none;
+}
+
+
+
+/* General typography */
+.date {
+    text-transform: uppercase;
+}
+
+.more-info  {
+    text-align: center;
+    margin: 1.5em auto 3em auto;
+    text-decoration: underline;
+}
+
+/* Footer style */
+
+footer {
+    background-color: #202020;
+    color: white;
+    text-align: center;
+    padding: 3em 0;
+    line-height: 1.5;
+    font-weight: 700;
+}
+
+footer span {
+    display: block;
+    font-weight: 300;
+    font-size: 0.85rem;
+}
+
+
+
+/* Media queries */
+
+@media (min-width: 780px) {
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    .container {
+        grid-area: "article";
+    }
+    .hidden-until-width {
+        display: grid;
+    }
+
+    .main-article-summary p {
+        width: 760px;
+    }
+    .main-article-summary {
+        display: flex;
+        min-height: 500px;
+        align-items: start;
+        justify-content: center;
+        color: violet;
+    }
+}
