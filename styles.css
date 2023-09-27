@@ -248,4 +248,37 @@ article,
     .second-page-hero h1 {
         margin-bottom: 1em;
     }
+
+    .about-me-section {
+        margin-top: 7em;
+    }
+    .grid-about  {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 3em;
+    }
+    .headshot {
+        max-width: 20%;
+    }
+    .block {
+        display: block;
+    }
+    .grid-about p {
+        margin-top: 1em;
+        font-size: 1rem;
+    }
+    .about-me-section p,
+    .content-info p{
+        font-size: 1.2rem;
+        line-height: 1.5;
+    }
+    .content-info h2 {
+        font-size: 2rem;
+        margin-bottom: 1em;
+    }
+    .content-info {
+        margin: 0 5em;
+    }
+
 }
