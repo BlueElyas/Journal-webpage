@@ -18,7 +18,6 @@ body {
 /* Index header design */
 header {
     margin: 1em;
-    padding: 0.5em;
 }
 
 .index-header div {
@@ -29,19 +28,20 @@ header {
 
 .index-header ul {
     list-style-type: none;
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     display: inline-flex;
 }
+
 
 .index-header li {
     margin-left: 3em;
 }
 
 .index-header h1 {
-    font-size: 1.25rem;
+    font-size: 0.8rem;
 }
 
-a {
+nav a {
     text-decoration: none;
     color: black;
 }
@@ -76,6 +76,7 @@ a {
 
 .grid {
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))
 }
 
 article {
@@ -148,14 +149,14 @@ article,
     user-select: none;
 }
 
-/* Article page design */
+/* Second page design */
 
-.article-image {
-    width: 100%;
-    height: 100px;
+
+/* Second page typography */
+
+.second-page-hero {
+    margin-top: 3em;
 }
-
-/* Article page typography */
 
 .second-page-hero h1 {
     font-size: 2em;
@@ -163,9 +164,19 @@ article,
     color: #252525;
 }
 
+.second-page-hero p{
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.second-page-hero h2 {
+    font-size: 1rem;
+}
+
 .recent-posts {
     text-align: center;
-    margin: 1em 0;
+    margin: 1em 0 0 0;
+    font-size: 1.5rem;
 }
 
 
@@ -174,31 +185,50 @@ article,
 @media (min-width: 780px) {
     .grid {
         width: 100%;
-        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(0px, 1fr));
     }
-    .container {
-        grid-area: "article";
-    }
+
     .hidden-until-width {
         display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(0px, 1fr));
     }
 
     .main-article-summary h1 {
         font-size: 4rem;
     }
 
-    .main-article-summary p,
-    .second-page-hero p {
-        width: 1000px;
-    }
+
     .main-article-summary {
         display: flex;
-        min-height: 500px;
         align-items: start;
         justify-content: center;
+        padding: 1em 4em;
+    }
+
+    .index-header ul {
+        font-size: 1rem;
+    }
+    .index-header h1 {
+        font-size: 2rem;
     }
     .second-page-hero {
-        width: 1000px;
         margin: auto;
+    }
+    .second-page-hero h1,
+    .second-page-hero p,
+    .second-page-hero h2 {
+        margin: 0 8rem;
+        max-width: 1000px;
+    }
+    .image-container {
+        height: 500px;
+        margin: 1em 2em 4em 2em;
+    }
+
+    .second-page-hero h2 {
+        font-size: 1.5em;
+    }
+    .second-page-hero h1 {
+        margin-bottom: 1em;
     }
 }
