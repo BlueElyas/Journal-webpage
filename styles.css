@@ -196,6 +196,10 @@ article,
 .about-me-section h2 {
     font-size: 1rem;
 }
+.about-me-section p {
+    padding: 1em 0;
+    line-height: 1.5;
+}
 
 /* Media queries */
 
@@ -280,5 +284,4 @@ article,
     .content-info {
         margin: 0 5em;
     }
-
 }
